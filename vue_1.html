@@ -38,10 +38,10 @@
 			1. Create an image and set the following attributes with Vue {src, alt, title}
 			2. Augment the span below to include another class called "highlight", which has a yellow border.
 		-->
-		<span v-bind:class="loadClass" v-bind:class="loadClass" v-bind:style="newStyle" v-bind:alt="newAlt">
+		<span v-bind:class="loadClass"  v-bind:style="newStyle" >
 			look at me!
 		</span>
-        <img v-bind:title="newTitle" v-bind:href="newhref" v-bind:alt="imagenewAlt" v-bind:style="imageNewStyle">
+        <img v-bind:title="newTitle" v-bind:src="newSrc" v-bind:alt="imageNewAlt" v-bind:style="imageNewStyle">
 	</div>
 	
 	<script>
@@ -49,14 +49,13 @@
 		//Bind Vue object to HTML element through query selector
 		el: '#app',
 		data:{
-			loadClass : 'container',
-            loadClass: 'highlight',
+			loadClass : 'container highlight',            
 			newStyle : 'font-size:30px; border: solid yellow',
-			newAlt : 'dynamically set alt!',
-            newhref: 'www.vuejs.org',
-            imagenewAlt: 'New Alt Text',
+			
+            newSrc: 'https://media1.popsugar-assets.com/files/thumbor/AqDVD6_DQ4wYnaFkw8IH3bgUX40/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2022/08/08/957/n/1922398/117c1c7362f1870967bf08.62233584_/i/nick-jonas-priyanka-chopra-kids.jpg',
+            imageNewAlt: 'Priyanka & Nick Jonas',
             imageNewStyle: 'display:block;margin-top:20px;',
-            newTitle: 'New Title image'
+            newTitle: 'Priyanka & Nick Jonas'
 			
 		}
 	});
