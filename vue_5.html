@@ -20,30 +20,36 @@
 	
 	<script>
 	var app = new Vue({
-		el: '#app',
-		
-		data:{
+		el: '#app',		
+		data:
+		{
 			boxHeight:200,
 			boxHidden : false,
 			message  : 'Make me disappear!',
             buttonMessage: "Hide",
             boxHeight: 100,            
 		},
-		methods:{
-			showhide : function(){
+		methods:
+		{
+			showhide : function()
+			{
 				console.log(this.boxHidden);
-				if(this.boxHidden){
+				if(this.boxHidden)
+				{
 					this.boxHidden=false;
                     this.buttonMessage = "Hide";
-				}else{
+				}
+				else
+				{
 					this.boxHidden=true;
                     this.buttonMessage = "Show";	
 				}
 			},
-            increaseHeight: function () {
+            increaseHeight: function () 
+			{
                 console.log(this.boxHeight);
                 this.boxHeight +=10;                              
-          },
+          	},
 		}		
 	});
 	</script>
