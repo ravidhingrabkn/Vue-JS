@@ -14,8 +14,7 @@
 	
 	<div id="app">
 		<div v-bind:class="{box:true, hidden:boxHidden}">{{message}}</div>
-		<button v-on:click="showhide();">{{ buttonMessage }}</button>
-        <!-- <div v-on:mouseover="increaseHeight" v-bind:style="{height:boxHeight+'px',width:'100px',backgroundColor:'red'}">Mouse over me</div> -->
+		<button v-on:click="showhide();">{{ buttonMessage }}</button>        
         <div v-on:mouseover="increaseHeight();" v-bind:class="{redbox:true}" v-bind:style="{height:boxHeight+'px'}">Mouse over me</div>
     </div>
 	
@@ -28,8 +27,7 @@
 			boxHidden : false,
 			message  : 'Make me disappear!',
             buttonMessage: "Hide",
-            boxHeight: 100,
-            // lineHeight: 50,
+            boxHeight: 100,            
 		},
 		methods:{
 			showhide : function(){
@@ -44,11 +42,9 @@
 			},
             increaseHeight: function () {
                 console.log(this.boxHeight);
-                this.boxHeight +=10; 
-                // this.lineHeight +10;              
+                this.boxHeight +=10;                              
           },
-		}
-		
+		}		
 	});
 	</script>
 	<!--
